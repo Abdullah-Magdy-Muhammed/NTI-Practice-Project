@@ -24,8 +24,10 @@ class studentResourceController extends Controller
     public function index()
     {
         //
-        $data = stdResource::orderby('id','desc')->paginate(5);
-        return view('ResourceStd.index',['data'=>$data]);
+       // $data = stdResource::select('students.*','departments.title')->join('departments','departments.id','=','students.dep_id')->orderby('id','desc')->paginate(5);
+       $obj = new stdResource();
+       $result = $obj->doQuery();  
+       return view('ResourceStd.index',['data'=>$result]);
     }
 
     /**

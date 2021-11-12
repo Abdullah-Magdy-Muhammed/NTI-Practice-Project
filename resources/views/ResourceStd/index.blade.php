@@ -17,10 +17,11 @@
             <table class="table table-hover table-resposive table-bordered">
                 <tr>
                     <th>#</th>
-                    <th>id</th>
-                    <th>name</th>
-                    <th>email</th>
-                    <th>action</th> 
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Deparment</th>
+                    <th>Action</th> 
 
                 </tr>
 <?php $i=1;?>
@@ -30,7 +31,7 @@
                     <td>{{$fetchedData->id}}</td>
                     <td>{{$fetchedData->name}}</td>
                     <td>{{$fetchedData->email}}</td>
-
+                    <td>{{$fetchedData->department->title}}</td>
                     <td>
                         <a href="" data-toggle="modal" data-target="#modal_single_del{{$fetchedData->id}}">delete</a>                        
                         <a href='{{url('/Users/'.$fetchedData->id.'/edit')}}' class="btn btn-primary m-r-1em">Edit</a> 
