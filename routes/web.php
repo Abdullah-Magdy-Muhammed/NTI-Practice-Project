@@ -16,7 +16,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+// Language Routes .....
 
+Route::get('Lang/{lang}',function($lang){
+    if($lang == 'ar') {
+        session()->put('lang','ar');
+    } else {
+        session()->put('lang','en');
+    }
+    return back();
+});
 
 // Student Routes ......
 

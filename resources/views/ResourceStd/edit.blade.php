@@ -28,16 +28,16 @@
   <input type="hidden" name="_method" value="put">
   @method("put")
   <div class="form-group"> 
-    <label for="exampleInputPassword1">  name </label> 
+    <label for="exampleInputPassword1">  {{trans('website.name')}} </label> 
     <input type="text" name="name"   value="{{$data->name}}" class="form-control" id="exampleInputPassword1" placeholder="name"> 
   </div> 
 
   <div class="form-group"> 
-    <label for="exampleInputEmail1">Email address</label> 
+    <label for="exampleInputEmail1">{{trans('website.email')}}</label> 
     <input type="email" name="email" value="{{$data->email}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> 
   </div> 
    
-  <button type="submit" class="btn btn-primary">Save</button> 
+  <button type="submit" class="btn btn-primary">{{trans('website.save')}}</button> 
  
 </form> 
 </div> 

@@ -3,25 +3,27 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Display</title>
+        <title>PDO - Read Records - PHP CRUD Tutorial</title>
     </head>
     <body>
         <div class="container">
             <div class="page-header">
-                <h1>Read Users</h1>
+                <h1>{{trans('website.std')}}</h1>
                 <br>
                 <br>
-                <a href="{{url('Student/logout')}}">LogOut</a> || <a href="{{url('Users/create')}}">Create</a>
+                <a href="{{url('Student/logout')}}">{{trans('website.logout')}}</a> || <a href="{{url('Users/create')}}">{{trans('website.create')}}</a>
+                <a href="{{url('/Lang/en')}}">EN</a> || <a href="{{url('/Lang/ar')}}">AR</a>
+
             </div>
-            {{ session()->get('message') }}
+
             <table class="table table-hover table-resposive table-bordered">
                 <tr>
                     <th>#</th>
-                    <th>Id</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Deparment</th>
-                    <th>Action</th> 
+                    <th>{{trans('website.id')}}</th>
+                    <th>{{trans('website.name')}}</th>
+                    <th>{{trans('website.email')}}</th>
+                    <th>{{trans('website.department')}}</th>
+                    <th>{{trans('website.action')}}</th> 
 
                 </tr>
 <?php $i=1;?>
@@ -33,8 +35,8 @@
                     <td>{{$fetchedData->email}}</td>
                     <td>{{$fetchedData->department->title}}</td>
                     <td>
-                        <a href="" data-toggle="modal" data-target="#modal_single_del{{$fetchedData->id}}">delete</a>                        
-                        <a href='{{url('/Users/'.$fetchedData->id.'/edit')}}' class="btn btn-primary m-r-1em">Edit</a> 
+                        <a href="" data-toggle="modal" data-target="#modal_single_del{{$fetchedData->id}}">{{trans('website.delete')}}</a>                        
+                        <a href='{{url('/Users/'.$fetchedData->id.'/edit')}}' class="btn btn-primary m-r-1em">{{trans('website.edit')}}</a> 
                     </td>
                 </tr>
                 
