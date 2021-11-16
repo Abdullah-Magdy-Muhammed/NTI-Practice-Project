@@ -56,7 +56,7 @@ class studentResourceController extends Controller
             "email"    => "required|email",
             "password" => "required|min:6|max:10",
             "dep_id"   => "required" 
-    ]);
+        ]);
 
         $data['password'] = bcrypt($data['password']);
         $op = stdResource :: create($data);

@@ -53,9 +53,11 @@ Route::get('Student/login','studentResourceController@login');
 Route::post('Student/dologin','studentResourceController@dologin');
 Route::get('Student/logout','studentResourceController@logout');
 
+Route::get('ApiLogin',function(){
+    return response()->json(['message'=>'Login First']);
+})->name('login');
 
-
-Route::get('login','studentController@login')->name('login');
+Route::get('login','studentController@login');
 Route::post('dologin','studentController@dologin');
 Route::get('logout','studentController@logout');
 
